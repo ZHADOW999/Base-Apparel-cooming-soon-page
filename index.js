@@ -3,10 +3,11 @@
   const emailError = document.getElementById('error');
 
   emailForm.addEventListener('submit', function(event) {
-    event.preventDefault();
+
     const email = emailInput.value.trim();
     if (!isValidEmail(email)) {
       emailError.textContent = 'Please enter a valid email address.';
+         event.preventDefault();
     } else {
       emailError.textContent = '';
       
