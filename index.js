@@ -1,14 +1,21 @@
- const emailForm = document.getElementById('emailForm');
+const emailForm = document.getElementById('emailForm');
   const emailInput = document.getElementById('emailText');
   const emailError = document.getElementById('error');
 
   emailForm.addEventListener('submit', function(event) {
-
+    event.preventDefault();
     const email = emailInput.value.trim();
-    if (!isValidEmail(email)) {
+    if(emailText.value.trim() ==""){
+        errorIcon.style.display = "block";
+         error.textContent="You forgot to add your email";
+    }
+    else if (!isValidEmail(email)) {
       emailError.textContent = 'Please enter a valid email address.';
-         event.preventDefault();
-    } else {
+      
+      errorIcon.style.display = "block";
+    } 
+    
+    else {
       emailError.textContent = '';
       
     }
