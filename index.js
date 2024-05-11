@@ -14,7 +14,7 @@ mysubmit.onclick = function(){
         error.textContent="You forgot to add your email";
     }
     else if(emailText.value.match(emailRegex)){
-        
+        errorIcon.style.display = "none";
         error.textContent = "";
     }  
 
